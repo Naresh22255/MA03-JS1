@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js11</title>
+</head>
+<body>
+
+	<p id="slide"></p>
+
+	<script type="text/javascript">
+
+		/* function bbb (){
+
+			var a = bbb();
+
+			for (var b = 0; b < a.length; b++ ) {
+				if (b < a){
+					break;
+				} 
+				return a;
+			}
+		}
+		console.log(a(1,2,3,4));
+		*/
+
+
+
+
+		var n = function(){
+			var minste = Infinity;
+			if (arguments.lenght == 0) {
+				return NaN;
+			}
+
+			for (var a of arguments) {
+				if (a < minste) minste = a;
+			}
+			return minste;
+
+		}(2,3,4,1,12,-3,14);
+		console.log(n);
+
+		var arr = [1,2,3,4,5,6];
+		for (var i = 0; i < arr.length; i ++){
+			arr.pop();
+		}
+
+
+		// Slide show with images
+
+		var images = [
+		"htps://www.w3schools.com/html/pulpitrock.jpg",
+		"htps://www.w3schools.com/html/img_girl.jpg",
+		"htps://www.w3schools.com/html/img_china.jpg"
+		];
+
+		var imgElement = document.getElementById("slide");
+		imgElement.src = images[0];
+
+		var teller = 1;
+		setInterval(function(){
+			imgElement.src = images[teller];
+			teller++;
+			if(teller % images.length == 0){
+				teller = 0;
+			}
+		}, 3000);
+
+
+
+
+
+
+		
+
+	</script>
+
+</body>
+</html>
