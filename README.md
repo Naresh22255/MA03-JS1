@@ -1,1 +1,1 @@
-MA03-JS1
+Module Assignment 3 for Javascript 1
